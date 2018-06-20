@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from '../actions'
@@ -11,7 +11,7 @@ import './App.css';
 class App extends Component {
   static propTypes = {
     selectedSubreddit: PropTypes.string.isRequired,
-    posts: PropTypes.array.isRequired,
+    posts:          PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     isFetching: PropTypes.bool.isRequired,
     lastUpdated: PropTypes.number,
     dispatch: PropTypes.func.isRequired
@@ -46,14 +46,14 @@ class App extends Component {
     const isEmpty = posts.length === 0
     return (
       <div className="App">
-        <header className="App-header">
+		 <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-		
+
         <Picker value={selectedSubreddit}
                 onChange={this.handleChange}
-                options={[ 'reactjs', 'frontend' ]} />
+                options={[ 'user/8', 'user/list' ]} />
         <p>
           {lastUpdated &&
             <span>

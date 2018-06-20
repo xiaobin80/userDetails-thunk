@@ -1,16 +1,42 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const Posts = ({posts}) => (
-  <ul className="ul-align">
-    {posts.map((post, i) =>
-      <li key={i}>{post.title}</li>
-    )}
-  </ul>
-)
+import User from './User';
 
-Posts.propTypes = {
-  posts: PropTypes.array.isRequired
+class Posts extends Component {
+	render() {
+		var postArray = Array.of();
+      
+        if (this.props.posts.length > 0)
+            postArray = this.props.posts;
+        else
+            postArray.push(this.props.posts);
+
+        var users = postArray.map(
+            (value, index) => 
+                (<User user={value} key={index} />)
+        );
+		return(
+			<table border="1">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users}
+                </tbody>
+            </table>
+		);
+	}
 }
 
-export default Posts
+Posts.propTypes = {
+    posts:          PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+}
+
+export default Posts;
