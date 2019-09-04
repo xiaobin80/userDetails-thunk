@@ -33,13 +33,13 @@ This is the demo that shows a datasheet.
 
 ## Run
 ```bash
+npm install --save react
+npm install --save react-dom
+npm install --save react-scripts@3.1.1
 npm install --save redux
 npm install --save react-redux
 npm install --save redux-logger
 npm install --save redux-thunk
-npm install react-scripts@3.0.1
-npm install react
-npm install react-dom
 npm start
 ```
 
