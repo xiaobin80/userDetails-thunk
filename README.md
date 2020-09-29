@@ -35,7 +35,7 @@ This is the demo that shows a datasheet.
 ```bash
 npm install --save react
 npm install --save react-dom
-npm install --save react-scripts@3.3.0
+npm install --save react-scripts@3.4.1
 npm install --save redux
 npm install --save react-redux
 npm install --save redux-logger
