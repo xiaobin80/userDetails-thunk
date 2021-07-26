@@ -32,12 +32,11 @@ This is the demo that shows a datasheet.
 ```
 
 ## Run
-> react-script v3.4.4 is last v3
 
 ```bash
 npm install --save react
 npm install --save react-dom
-npm install --save react-scripts@3.4.4
+npm install --save react-scripts
 npm install --save redux
 npm install --save react-redux
 npm install --save redux-logger
