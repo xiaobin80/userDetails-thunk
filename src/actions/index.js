@@ -27,7 +27,7 @@ export const receivePosts = (subreddit, json) => ({
 
 const fetchPosts = subreddit => dispatch => {
   dispatch(requestPosts(subreddit))
-  return fetch(`http://192.168.0.95:8080/${subreddit}`)
+  return fetch(`http://192.168.3.128:8080/${subreddit}`)
     .then(response => response.json())
     .then(json => dispatch(receivePosts(subreddit, json)));
 }
