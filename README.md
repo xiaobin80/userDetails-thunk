@@ -6,6 +6,7 @@ This is the demo that shows a datasheet.
 
 - [Reference](#reference)
 - [Fetch](#fetch)
+- [Breaking](#breaking)
 - [Run](#run)
 
 ## Fetch
@@ -31,6 +32,12 @@ This is the demo that shows a datasheet.
 }
 ```
 
+## Breaking
+- readux-thunk
+> In readux-thunk@3 there is no longer any default export, 
+> so with import thunk from "redux-thunk" thunk is undefined.
+also see [import thunk from `redux-thunk` not working in stackblitz](https://stackoverflow.com/a/78244503)
+
 ## Run
 
 ```bash
@@ -42,12 +49,6 @@ npm install --save react-redux
 npm install --save redux-logger
 npm install --save redux-thunk
 npm start
-```
-
-### typescript
-> The new version of redux requires typescript.
-```bash
-npm install --save typescript
 ```
 
 
